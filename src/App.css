@@ -1,0 +1,246 @@
+:root {
+  --primary-color: #282c34;
+  --secondary-color: #61dafb;
+  --light-gray: #e0e1dd;
+  --dark-gray: #415a77;
+  --font-color: white;
+  --font-family: Arial, sans-serif;
+  --border-radius: 1rem;
+  --small-font-size: calc(10px + 1vmin);
+  --medium-font-size: calc(12px + 1.5vmin);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: calc(10px + 1vmin);
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label, h2 {
+  color: var(--font-color);
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+.App-header {
+  background-color: var(--primary-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(12px + 2vmin);
+  color: var(--font-color);
+}
+
+.App-link {
+  color: var(--secondary-color);
+  font-size: var(--medium-font-size);
+}
+
+#searchBarForm {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  font-size: var(--small-font-size);
+}
+
+#container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+#container > div {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+#signIn {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+#signIn > a {
+  padding: 2rem;
+  background-color: var(--font-color);
+  border-radius: var(--border-radius);
+  display: inline-block;
+  width: 30%;
+  font-size: var(--medium-font-size);
+}
+
+#signIn > a > p {
+  color: black;
+  font-size: var(--small-font-size);
+}
+
+#signIn img {
+  width: 20%;
+}
+
+#searchBarInputText {
+  border: none;
+  border-bottom: 2px solid red;
+  margin: 0.2rem;
+  font-size: var(--small-font-size);
+}
+
+label {
+  font-weight: bold;
+  font-size: var(--small-font-size);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul > li {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  border-radius: var(--border-radius);
+  margin: 1rem;
+  font-size: var(--small-font-size);
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+  padding: 1rem;
+}
+
+ul > li > * {
+  margin: 0.5rem;
+}
+
+ul > li > button {
+  background-color: var(--dark-gray);
+  border: none;
+  color: var(--font-color);
+  cursor: pointer;
+  font-size: var(--small-font-size);
+  padding: 0.5rem;
+  width: 45%;
+  margin: 0.5rem auto;
+  box-shadow: 10px 5px 5px black;
+}
+
+.App strong.trackName {
+  color: #1b263b;
+}
+
+/* Responsive Adjustments for Medium Screens (Tablets, etc.) */
+@media (max-width: 768px) {
+  html {
+    font-size: calc(9px + 1.5vmin);
+  }
+
+  .App-header {
+    font-size: calc(10px + 1.8vmin);
+  }
+
+  #container > div {
+    flex-basis: 90%;
+  }
+
+  #signIn > a {
+    width: 60%;
+  }
+
+  #searchBarForm {
+    width: 50%;
+  }
+}
+
+/* Responsive Adjustments for Small Screens (Mobile) */
+@media (max-width: 480px) {
+  html {
+    font-size: calc(8px + 1.5vmin);
+  }
+
+  .App-header {
+    font-size: calc(10px + 1.5vmin);
+  }
+
+  #container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  #container > div {
+    flex-basis: 100%;
+  }
+
+  #signIn > a {
+    width: 80%;
+    padding: 1rem;
+  }
+
+  #signIn img {
+    width: 40%;
+  }
+
+  #searchBarForm {
+    width: 80%;
+  }
+}
+
+/* Extra small screens (350px and below) */
+@media (max-width: 350px) {
+  html {
+    font-size: calc(7px + 1.5vmin);
+  }
+
+  #container > div {
+    flex-basis: 100%;
+  }
+
+  ul > li {
+    font-size: calc(9px + 1vmin);
+  }
+
+  #signIn > a {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  #searchBarForm {
+    width: 100%;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
